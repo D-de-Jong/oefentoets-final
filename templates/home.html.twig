@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1 class="text-center">genres</h1>
+    <div class="text-center">
+    {% for genre in genres%}
+
+        <a class="btn btn-secondary mt-3" href="{{ path('movies',{'id':genre.id}) }}" role="button">{{ genre.name }}</a>
+
+
+    {% endfor %}
+    </div>
+    <a class="btn btn-secondary mt-3" href="AddGenre" role="button">add new genre</a>
+
+{% endblock %}

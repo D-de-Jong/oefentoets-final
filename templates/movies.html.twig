@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <table class="table">
+    <thead>
+    <tr>
+
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">description</th>
+        <th scope="col">year</th>
+        <th scope="col">budget</th>
+    </tr>
+    </thead>
+{% for movie in genre.movies %}
+    <tr>
+        <th scope="row">{{ genre.id }}</th>
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.description }}</td>
+        <td>{{ movie.year }}</td>
+        <td>{{ movie.buget }}</td>
+    </tr>
+
+                {% endfor %}
+{% endblock %}
